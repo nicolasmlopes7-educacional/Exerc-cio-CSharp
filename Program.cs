@@ -44,30 +44,59 @@
 // }
 
 //! Ex3
-int numeroSecreto = 10;
+// int numeroSecreto = 10;
+// int contador = 0;
+// int palpite = 0;
+
+
+// while (palpite != numeroSecreto)
+// {
+//     Console.Write("Digite o palpite: ");
+//     palpite = int.Parse(Console.ReadLine());
+
+//     if (palpite > numeroSecreto)
+//     {
+//         Console.WriteLine($"O {palpite} foi maior que o número secreto!");
+//     }
+
+//     else if (palpite < numeroSecreto)
+//     {
+//         Console.WriteLine($"O {palpite} foi menor que o número secreto!");
+//     }
+
+//     else
+//     {
+//         Console.WriteLine($"O {palpite}, está correto e o número secreto é: {numeroSecreto}");
+//     }
+//     contador++;
+//     Console.WriteLine($"O usuário realizou {contador} tentativa(s).");
+// }
+
+//! Ex4
+// Console.Write("Digite o primeiro número: ");
+// int num1 = int.Parse(Console.ReadLine());
+
+// Console.Write("Digite o segundo número: ");
+// int num2 = int.Parse(Console.ReadLine());
+
+// Console.WriteLine($"A multiplicação dos números é: {num1 * num2}");
+// Console.WriteLine($"A soma dos números é: {num1 + num2}");
+
+//! Ex5
+
+int[] notas = new int[3];
+
 int contador = 0;
-int palpite = 0;
 
-
-while (palpite != numeroSecreto)
+while (contador < 3)
 {
-    Console.Write("Digite o palpite: ");
-    palpite = int.Parse(Console.ReadLine());
-
-    if (palpite > numeroSecreto)
-    {
-        Console.WriteLine($"O {palpite} foi maior que o número secreto!");
-    }
-
-    else if (palpite < numeroSecreto)
-    {
-        Console.WriteLine($"O {palpite} foi menor que o número secreto!");
-    }
-
-    else
-    {
-        Console.WriteLine($"O {palpite}, está correto e o número secreto é: {numeroSecreto}");
-    }
+    Console.Write("Digite a nota: ");
+    notas[contador] = int.Parse(Console.ReadLine());
     contador++;
-    Console.WriteLine($"O usuário realizou {contador} tentativa(s).");
+}
+
+foreach (var item in notas)
+{
+    Console.WriteLine(item);
+    
 }
