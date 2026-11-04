@@ -73,30 +73,94 @@
 // }
 
 //! Ex4
-// Console.Write("Digite o primeiro número: ");
-// int num1 = int.Parse(Console.ReadLine());
+// static void Somar()
+// {
+//     Console.Write("Digite o primeiro número: ");
+//     int num1 = int.Parse(Console.ReadLine());
 
-// Console.Write("Digite o segundo número: ");
-// int num2 = int.Parse(Console.ReadLine());
+//     Console.Write("Digite o segundo número: ");
+//     int num2 = int.Parse(Console.ReadLine());
 
-// Console.WriteLine($"A multiplicação dos números é: {num1 * num2}");
-// Console.WriteLine($"A soma dos números é: {num1 + num2}");
+//     Console.WriteLine($"A soma dos números é: {num1 + num2}");
+// }
+
+// static void Multiplicar()
+// {
+//     Console.Write("Digite o primeiro número: ");
+//     int num1 = int.Parse(Console.ReadLine());
+
+//     Console.Write("Digite o segundo número: ");
+//     int num2 = int.Parse(Console.ReadLine());
+
+//     Console.WriteLine($"A multiplicação dos números é: {num1 * num2}");
+// }
+
+// Somar();
+// Multiplicar();
 
 //! Ex5
+// int[] notas = new int[3];
 
-int[] notas = new int[3];
+// int contador = 0;
 
-int contador = 0;
+// while (contador < 3)
+// {
+//     Console.Write("Digite a nota: ");
+//     notas[contador] = int.Parse(Console.ReadLine());
+//     contador++;
+// }
 
-while (contador < 3)
+// foreach (var item in notas)
+// {
+//     Console.WriteLine($"A nota é: {item}");
+// }
+
+// double soma = 0;
+
+// foreach (var item in notas)
+// {
+//     soma += item;
+// }
+
+// double media = soma / notas.Length;
+
+// Console.WriteLine($"A média entre as notas é: {media}");
+
+//! Ex6
+List<string> produtos = new();
+
+for (int i = 1; i <= 3; i++)
 {
-    Console.Write("Digite a nota: ");
-    notas[contador] = int.Parse(Console.ReadLine());
-    contador++;
+    Console.Write($"O nome do produto {i}º é: ");
+    produtos.Add(Console.ReadLine()!);
 }
 
-foreach (var item in notas)
+Console.WriteLine("\nProdutos cadastrados: ");
+foreach (var p in produtos)
 {
-    Console.WriteLine(item);
-    
+    Console.WriteLine($"- {p}");
 }
+
+Console.Write("Nome do produto: ");
+string nome = Console.ReadLine()!;
+
+if (produtos.Contains(nome))
+{
+    Console.WriteLine("O produto está na lista!");
+}
+else
+{
+    Console.WriteLine("O produto não está na lista!");
+}
+
+Console.Write("Nome do produto: ");
+string nome1 = Console.ReadLine();
+
+if (produtos.Contains(nome1))
+{
+    if (produtos.Remove(nome1))
+    {
+        Console.WriteLine($"O produto {nome1}, foi removido da lista com sucesso!");
+    }
+}
+Console.WriteLine($"A lista atualizada é essa: {produtos}");
