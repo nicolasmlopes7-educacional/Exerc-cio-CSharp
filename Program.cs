@@ -127,40 +127,43 @@
 // Console.WriteLine($"A média entre as notas é: {media}");
 
 //! Ex6
-List<string> produtos = new();
+// List<string> produtos = new();
 
-for (int i = 1; i <= 3; i++)
-{
-    Console.Write($"O nome do produto {i}º é: ");
-    produtos.Add(Console.ReadLine()!);
-}
+// for (int i = 1; i <= 3; i++)
+// {
+//     Console.Write($"O nome do produto {i}º é: ");
+//     produtos.Add(Console.ReadLine()!);
+// }
 
-Console.WriteLine("\nProdutos cadastrados: ");
-foreach (var p in produtos)
-{
-    Console.WriteLine($"- {p}");
-}
+// Console.WriteLine("\nProdutos cadastrados: ");
+// foreach (var p in produtos)
+// {
+//     Console.WriteLine($"- {p}");
+// }
 
-Console.Write("Nome do produto: ");
-string nome = Console.ReadLine()!;
+// Console.Write("Nome do produto para buscar na lista: ");
+// string nome = Console.ReadLine()!;
 
-if (produtos.Contains(nome))
-{
-    Console.WriteLine("O produto está na lista!");
-}
-else
-{
-    Console.WriteLine("O produto não está na lista!");
-}
+// if (produtos.Contains(nome))
+// {
+//     Console.WriteLine($"O produto {nome} está na lista!");
+// }
+// else
+// {
+//     Console.WriteLine("O produto não está na lista!");
+// }
 
-Console.Write("Nome do produto: ");
-string nome1 = Console.ReadLine();
+// Console.Write("Nome do produto: ");
+// string nome1 = Console.ReadLine();
 
-if (produtos.Contains(nome1))
-{
-    if (produtos.Remove(nome1))
-    {
-        Console.WriteLine($"O produto {nome1}, foi removido da lista com sucesso!");
-    }
-}
-Console.WriteLine($"A lista atualizada é essa: {produtos}");
+// if (produtos.Contains(nome1))
+// {
+//     produtos.Remove(nome1);
+//     Console.WriteLine($"O produto {nome1}, foi removido da lista com sucesso!");
+
+//     Console.WriteLine("\nLista atualizada: ");
+//     foreach (var p in produtos)
+//     {
+//         Console.WriteLine($"- {p}");
+//     }
+// }
